@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>単語管理</title>
+</head>
+
+    <body>
+        <h1>単語一覧</h1>
+        <h2>本一覧</h2>
+        <p>単語が登録されていません</p>
+    <form method="post" action="{{ url_for('register') }}">
+        <table border="1">
+            <tr>
+                <th>タイトル</th>
+                <th>著者</th>
+            </tr>
+            
+            <tr>
+                <td><input type="text" name="title"></td>
+                <td><input type="text" name="author"></td>
+            </tr>
+            
+        </table>
+        <br>
+        <input type="submit" value="登録">
+    </form>
+        
+    </body>
+</html>
+

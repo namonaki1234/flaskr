@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>単語管理</title>
+</head>
+
+<body>
+    <h1>単語一覧</h1>
+    <h2>本一覧</h2>
+    {% if books == [] %}
+        <p>本が登録されていません</p>
+    {% else %}
+            <table border="1">
+            <tr>
+                <th>タイトル</th>
+                <th>著者</th>
+            </tr>
+            {% for book in books %}
+            <tr>
+                <td>{{ book.title }}</td>
+                <td>{{ book.author }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+    <a href="{{ url_for('add_word') }}">単語を追加</a>
+</body>
+</html>
+
